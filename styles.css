@@ -1,0 +1,155 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+body {
+    background-color: #e4e8f3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+section {
+    width: 90%;
+    margin: 50px 0;
+    justify-items: center;
+    display: grid;
+    grid-template:
+    auto
+    auto
+    auto
+    auto
+    auto
+    / 1fr;
+}
+
+.partie {
+    margin: 15px 0;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 25px 80px -40px #5B5B5B;
+    max-width: 625px;
+}
+
+.portrait {
+    border-radius: 100px;
+    border: 2px solid white;
+    width: 30px;
+    margin-right: 17px;
+}
+
+.prenom, .graduate {
+    margin: 0;
+}
+.prenom {
+    font-size: 0.9rem;
+}
+
+.graduate {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 60%);
+}
+
+.daniel {
+    background: url("images/bg-pattern-quotation.svg") top no-repeat;
+    background-position-x: 90%;
+    background-color: #733fc8;
+}
+
+
+
+.jonathan {
+    background-color: #49556b;
+}
+
+
+.jeanette {
+    background-color: #ffffff;
+    color: #444b51;
+}
+
+.patrick {
+    background-color: #18202d;
+}
+
+
+.kira {
+    background-color: #ffffff;
+    color: #444b51;
+}
+
+
+
+.personne {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.summary {
+    font-size: 1.225rem;
+    font-weight: 600;
+}
+.verbatim {
+    font-weight: 500;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 60%);
+}
+
+.jeanette .personne .identité .graduate,
+.kira .personne .identité .graduate {
+    color: rgb(68, 75, 81, 60%);
+}
+
+.jeanette .verbatim,
+.kira .verbatim {
+    color: rgb(68, 75, 81, 60%);
+}
+
+.portrait[alt="daniel"],
+.portrait[alt="jonathan"] {
+    border-color: rgba(255, 255, 255, 0.6);
+}
+.portrait[alt="patrick"] {
+    border-color: #733fc8;
+}
+
+
+@media (min-width: 1119px) {
+
+    section {
+        width: 1110px;
+        grid-template:
+        auto
+        auto
+        / 1fr 1fr 1fr 1fr;
+        grid-gap: 30px;
+
+    }
+
+    .partie {
+        margin: 0;
+    }
+
+    .daniel {
+        grid-area: 1 / 1 / 2 / 3;
+    }
+
+    .jonathan {
+        grid-area: 1 / 3  / 2 / 4;
+    }
+
+    .kira {
+        grid-area: 1 / 4 / 3 / 5;
+    }
+
+    .patrick {
+        grid-area: 2 / 2 / 3 / 4;
+    }
+
+}
